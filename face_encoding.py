@@ -30,7 +30,7 @@ def load_encodings():
         "C:/Users/U-ser/OneDrive - American University of Phnom Penh/Desktop/image/hour17.png",
         "C:/Users/U-ser/OneDrive - American University of Phnom Penh/Desktop/image/hour18.png",
         "C:/Users/U-ser/OneDrive - American University of Phnom Penh/Desktop/image/hour19.png",
-    ]
+    ] #replace with the user image from your device
     hour_encodings = []
     for image_path in hour_images:
         image = face_recognition.load_image_file(image_path)
