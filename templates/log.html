@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Log</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar"></div>
+
+    <!-- Header -->
+    <header>
+        <img src="static/logo.png" alt="AUPP Logo">
+        <h1>Attendance Log</h1>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Update header to include the date -->
+        <h2>Attendance Log{% if selected_date %} - {{ selected_date }}{% endif %}</h2>
+        <!-- Display Table -->
+        <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+            <thead>
+                <tr style="background-color: #012b61; color: white;">
+                    <th style="padding: 10px; text-align: center;">Name</th>
+                    <th style="padding: 10px; text-align: center;">Gender</th>
+                    <th style="padding: 10px; text-align: center;">Time</th>
+                    <th style="padding: 10px; text-align: center;">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for entry in attendance %}
+                <tr>
+                    <td style="padding: 10px; border-bottom: 1px solid #ccc;">{{ entry.name }}</td>
+                    <td style="padding: 10px; border-bottom: 1px solid #ccc;">{{ entry.gender }}</td>
+                    <td style="padding: 10px; border-bottom: 1px solid #ccc;">{{ entry.status }}</td>
+                    <td style="padding: 10px; border-bottom: 1px solid #ccc;">{{ entry.time }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="/" class="btn" style="margin-top: 20px;">Back to Home</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Developed by CheaMenghour</p>
+        <p>Email: <a href="mailto:cheamenghour20@gmail.com">cheamenghour20@gmail.com</a></p>
+        <p>&copy; 2024 American University of Phnom Penh. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUPP Attendance System</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar"></div>
+
+    <!-- Header -->
+    <header>
+        <img src="static/logo.png" alt="AUPP Logo">
+        <h1>AUPP Attendance System</h1>
+    </header>
+
+    <!-- Main Wrapper -->
+    <div class="wrapper">
+        <!-- Main Content -->
+        <div class="container">
+            <h2>Welcome to the AUPP Attendance System</h2>
+            <a href="/start_attendance" class="btn">Start Attendance</a>
+            <a href="/stop_attendance" class="btn">Stop Attendance</a>
+            <form action="/view_log_by_date" method="POST">
+                <label for="date">Select Date:</label>
+                <input type="date" id="date" name="date" required>
+                <button type="submit" class="btn">View Attendance</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Developed by CheaMenghour</p>
+        <p>Email: <a href="mailto:cheamenghour20@gmail.com">cheamenghour20@gmail.com</a></p>
+        <p>&copy; 2024 American University of Phnom Penh. All rights reserved.</p>
+    </footer>
+</body>
+</html>
