@@ -25,7 +25,7 @@ csv_writer = None
 attendance_file = None
 
 # Set the class start time (configurable)
-class_start_time_str = "13:20" #set as HH:MM
+class_start_time_str = "13:20" #set the start time class as HH:MM
 class_start_time = datetime.strptime(class_start_time_str, "%H:%M").time()
 
 def initialize_csv():
